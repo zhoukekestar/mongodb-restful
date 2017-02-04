@@ -1,0 +1,37 @@
+{
+  "name": "mongodb-restful",
+  "version": "0.0.1",
+  "description": "A restful server for mongodb.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhoukekestar/mongodb-restful.git"
+  },
+  "keywords": [
+    "restful",
+    "server",
+    "mongodb",
+    "mongo",
+    "browser",
+    "http"
+  ],
+  "dependencies": {
+    "mongodb": "1.2.x",
+    "restify": "2.3.x"
+  },
+  "devDependencies": {
+    "supertest": "0.5.x",
+    "mocha": "1.8.x"
+  },
+  "author": "zhoukekestar@163.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zhoukekestar/mongodb-restful/issues"
+  },
+  "bin": "./bin/crest",
+  "homepage": "https://github.com/zhoukekestar/mongodb-restful#readme"
+}

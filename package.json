@@ -1,6 +1,6 @@
 {
   "name": "mongodb-restful",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A restful server for mongodb.",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,8 @@
     "http"
   ],
   "dependencies": {
-    "mongodb": "1.2.x",
-    "restify": "2.3.x"
+    "mongodb": "^2.2.22",
+    "restify": "^4.3.0"
   },
   "devDependencies": {
     "supertest": "0.5.x",

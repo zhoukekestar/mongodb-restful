@@ -5,11 +5,10 @@
  * crest
  */
 
-var fs = require("fs"),
-  mongodb = require("mongodb"),
-  restify = module.exports.restify = require("restify");
-
-var DEBUGPREFIX = "DEBUG: ";
+var fs = require("fs")
+  , mongodb = require("mongodb")
+  , restify = require("restify")
+  , DEBUGPREFIX = "DEBUG: ";
 
 var config = {
   "db": {
@@ -24,7 +23,7 @@ var config = {
   "debug": false
 };
 
-var debug = module.exports.debug = function (str) {
+var debug = function (str) {
   if (config.debug) {
     console.log(DEBUGPREFIX + str);
   }
@@ -36,18 +35,23 @@ try {
   console.warn("No .mongodb-restful file found. Fall back to default config.");
 }
 
-module.exports.config = config;
 
 var server = restify.createServer({
-  name: "crest"
+  name: "mongodb-restful"
 });
+
 server.acceptable = ['application/json'];
 server.use(restify.acceptParser(server.acceptable));
 server.use(restify.bodyParser());
 server.use(restify.fullResponse());
 server.use(restify.queryParser());
 server.use(restify.jsonp());
+
+
+module.exports.config = config;
 module.exports.server = server;
+module.exports.restify = restify;
+module.exports.debug = debug;
 
 require('./lib/rest');
 

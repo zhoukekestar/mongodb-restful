@@ -1,6 +1,6 @@
 {
   "name": "mongodb-restful",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A restful server for mongodb.",
   "main": "index.js",
   "scripts": {

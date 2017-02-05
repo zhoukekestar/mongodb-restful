@@ -5,7 +5,7 @@
  * crest
  */
 
-var main = require('../server'),
+var main = require('../'),
   supertest = require('supertest'),
   assert = require('assert'),
   http = require('http');
